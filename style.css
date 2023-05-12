@@ -1,1 +1,20 @@
+<style>
+ #checklist {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#checklist li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#checklist li.checked label {
+  text-decoration: line-through;
+  color: #aaa;
+}
+#checklist li input[type="checkbox"] {
+  margin-right: 10px;
+}
+</style>
 
