@@ -1,4 +1,38 @@
 <b>Ciao</b>
+<script>
+  const buttonAdd = document.getElementById('add');
+  const lists = document.getElementById('lists');
+  const textInput = document.querySelector('.textInput');
+  
+  buttonAdd.addEventListener('click', generateList);
+  
+  function generateList(event) {
+    event.preventDefault();
+    
+    if (textInput.value === '') return;
+    
+    cons li = document.createElement('li');
+    lists.appendChild(li);
+    li.appendChild(document.createTextNote(textInput.value));
+    
+    const buttonDelete = document.createElement('button');
+    buttonDelete.className = 'delete';
+    buttonDelete.appendChild(document.createTextNote('X');
+    li.appendChild(buttonDelete);
+    
+    textInput.value = '';
+    
+    buttonDelete.addEventListern('click', (event) =>{
+      const parentNodeE1 = event.target.perentNode;
+      setTimeout(() =>{
+        parentNodeE1.remove();
+      }, 500)
+      
+    });
+    
+  }
+</script>
+
 <style>
   .container{
     background: #ff6676;
@@ -45,36 +79,3 @@
   }
 </style>
 
-<script>
-  const buttonAdd = document.getElementById('add');
-  const lists = document.getElementById('lists');
-  const textInput = document.querySelector('.textInput');
-  
-  buttonAdd.addEventListener('click', generateList);
-  
-  function generateList(event) {
-    event.preventDefault();
-    
-    if (textInput.value === '') return;
-    
-    cons li = document.createElement('li');
-    lists.appendChild(li);
-    li.appendChild(document.createTextNote(textInput.value));
-    
-    const buttonDelete = document.createElement('button');
-    buttonDelete.className = 'delete';
-    buttonDelete.appendChild(document.createTextNote('X');
-    li.appendChild(buttonDelete);
-    
-    textInput.value = '';
-    
-    buttonDelete.addEventListern('click', (event) =>{
-      const parentNodeE1 = event.target.perentNode;
-      setTimeout(() =>{
-        parentNodeE1.remove();
-      }, 500)
-      
-    });
-    
-  }
-</script>
