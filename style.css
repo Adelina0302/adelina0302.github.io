@@ -40,6 +40,9 @@ p{
   color: #ABADFC;
   margin-bottom: 0px;
 }
+.subtitle-no-margin{
+  margin-left: 0px;
+}
 li{
  margin-bottom: 20px;
  margin-left: 20px;
