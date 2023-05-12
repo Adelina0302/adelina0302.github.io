@@ -16,7 +16,7 @@
 #checklist li input[type="checkbox"] {
   margin-right: 10px;
 }
-h2{
+.title{
  font-size: 50px;
  font-family: revert;
  color: #ABADFC;
