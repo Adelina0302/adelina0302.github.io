@@ -17,12 +17,16 @@
   margin-right: 10px;
 }
 .title{
- font-size: 50px;
- font-family: revert;
- color: #ABADFC;
+  font-size: 50px;
+  font-family: revert;
+  color: #ABADFC;
 }
 li::marker{
  display:none;
 }
 li{
  margin-bottom: 20px;
+}
+.check{
+  border-bottom: 1px solid #000;
+}
