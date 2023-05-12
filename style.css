@@ -52,7 +52,7 @@ li{
 }
 .check-no-margin{
   border: 2px solid #ABADFC;
-  margin-left: 50px;
+  margin-left: 0px;
   margin-right: 50px;
 }
 .row{
