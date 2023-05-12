@@ -67,6 +67,9 @@ li{
  margin-left: 20px;
  font-size: 20px;
 }
+li::marker{
+ display: none;
+}
 .check{
   border: 2px solid #ABADFC;
   margin-left: 50px;
