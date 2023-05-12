@@ -50,6 +50,11 @@ li{
   margin-left: 50px;
   margin-right: 50px;
 }
+.check-no-margin{
+  border: 2px solid #ABADFC;
+  margin-left: 50px;
+  margin-right: 50px;
+}
 .row{
   display: flex;
   width: 100%;
