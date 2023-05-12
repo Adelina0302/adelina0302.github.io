@@ -1,156 +1,44 @@
 <b>Ciao</b>
 
-<head>
-            
-    <title>Essential JS 2 for ListView </title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Essential JS 2 for ListView UI Control" />
-    <meta name="author" content="Syncfusion" />
-    <link href="index.css" rel="stylesheet" />
-    <link href="//cdn.syncfusion.com/ej2/21.2.3/ej2-base/styles/material.css" rel="stylesheet" />
-    <link href="//cdn.syncfusion.com/ej2/21.2.3/ej2-buttons/styles/material.css" rel="stylesheet" />
-    <link href="//cdn.syncfusion.com/ej2/21.2.3/ej2-lists/styles/material.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
-    <script src="systemjs.config.js"></script>
-</head>
-
-<body>
-    <div id='loader'>Loading....</div>
-    <div id='container'>
-        <div id='element'></div>
-    </div>
-</body>
-
+<h2>La mia checklist</h2>
+<ul id="checklist">
+  <li><input type="checkbox" id="item1" value="item1"><label for="item1">Attività 1</label></li>
+  <li><input type="checkbox" id="item2" value="item2"><label for="item2">Attività 2</label></li>
+  <li><input type="checkbox" id="item3" value="item3"><label for="item3">Attività 3</label></li>
+</ul>
 <script>
-    import { ListView } from '@syncfusion/ej2-lists';
+            const checklist = document.getElementById('checklist');
+const items = checklist.querySelectorAll('li input');
 
-//define the array of JSON
-let data: { [key: string]: Object }[] = [
-    { text: 'Hennessey Venom', id: 'list-01' },
-    { text: 'Bugatti Chiron', id: 'list-02' },
-    { text: 'Bugatti Veyron Super Sport', id: 'list-03' },
-    { text: 'SSC Ultimate Aero', id: 'list-04' },
-    { text: 'Koenigsegg CCR', id: 'list-05' },
-    { text: 'McLaren F1', id: 'list-06' },
-    { text: 'Aston Martin One- 77', id: 'list-07' },
-    { text: 'Jaguar XJ220', id: 'list-08' },
-    { text: 'McLaren P1', id: 'list-09' },
-    { text: 'Ferrari LaFerrari', id: 'list-10' },
-];
-
-//Initialize ListView control
-let listviewInstance: ListView = new ListView({
-    //Set the data to datasource property
-    dataSource: data,
-
-    //Enable checkbox
-    showCheckBox: true,
-
-    //Set Checkbox position
-    checkBoxPosition: 'Right'
+items.forEach(item => {
+  item.addEventListener('change', function() {
+    if (this.checked) {
+      this.parentNode.classList.add('checked');
+    } else {
+      this.parentNode.classList.remove('checked');
+    }
+  });
 });
-
-//Render initialized ListView
-listviewInstance.appendTo("#element");
-  const buttonAdd = document.getElementById('add');
-  const lists = document.getElementById('lists');
-  const textInput = document.querySelector('.textInput');
-  
-  buttonAdd.addEventListener('click', generateList);
-  
-  function generateList(event) {
-    event.preventDefault();
-    
-    if (textInput.value === '') return;
-    
-    cons li = document.createElement('li');
-    lists.appendChild(li);
-    li.appendChild(document.createTextNote(textInput.value));
-    
-    const buttonDelete = document.createElement('button');
-    buttonDelete.className = 'delete';
-    buttonDelete.appendChild(document.createTextNote('X');
-    li.appendChild(buttonDelete);
-    
-    textInput.value = '';
-    
-    buttonDelete.addEventListern('click', (event) =>{
-      const parentNodeE1 = event.target.perentNode;
-      setTimeout(() =>{
-        parentNodeE1.remove();
-      }, 500)
-      
-    });
-    
-  }
 </script>
-
 <style>
-  #container {
-    visibility: hidden;
+            #checklist {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-#loader {
-  color: #008cff;
-  height: 40px;
-  width: 30%;
-  position: absolute;
-  font-family: 'Helvetica Neue','calibiri';
-  font-size: 14px;
-  top: 45%;
-  left: 45%;
+#checklist li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-#element {
-    display: block;
-    max-width: 400px;
-    margin: auto;
-    border: 1px solid #dddddd;
-    border-radius: 3px;
+#checklist li.checked label {
+  text-decoration: line-through;
+  color: #aaa;
 }
-  .container{
-    background: #ff6676;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-  }
-  .container h3 {
-    color: #fff;
-    text-align: center;
-    margin-bottom: 15px;
-    height: auto;
-  }
-  .form{
-    display: flex;
-    width: 100%;
-  }
-  .textInput{
-    width: 100%;
-    border: none;
-    padding: 14px;
-  }
-  #add{
-    widht: 30%;
-    cursor: pointer;
-    background: #2c45a3;
-    border: none;
-    color: #fff;
-    font-size: 18px;
-  }
-  ul#list li{
-    padding: 12px;
-    backgruond: #fff;
-    border: 1px solid #2c45a3;
-    display: flex;
-    justify-content: space-between;
-  }
-  .delete{
-    padding: 10px;
-    cursor: pointer;
-    border: none;
-    background: #ff6676;
-    color: #fff;
-  }
+
+#checklist li input[type="checkbox"] {
+  margin-right: 10px;
+}
 </style>
-
