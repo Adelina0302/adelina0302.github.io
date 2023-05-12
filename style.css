@@ -30,7 +30,8 @@ p{
   background: #ABADFC;
   color: #fff;
   margin: 0px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 .subtitle{
   font-size: 30px;
@@ -52,7 +53,4 @@ li{
 }
 .spazio{
   margin-top: 20px;
-}
-.colore{
-  background: #ABADFC;
 }
