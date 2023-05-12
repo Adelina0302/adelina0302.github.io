@@ -56,6 +56,9 @@ p{
   border: 1px solid #000;
   margin-left: 50px;
   margin-right: 50px;
+  text-align: center;
+  margin-left: 43%;
+  width: 260px;
 }
 li{
  margin-bottom: 20px;
