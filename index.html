@@ -5,9 +5,9 @@
   <body>
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Chi siamo</a></li>
-          <li><a href="#">Contatti</a></li>
+          <li><a href="#section1">CPannel</a></li>
+          <li><a href="#section2">FTP</a></li>
+          <li><a href="#section3">WordPress</a></li>
         </ul>
 	</nav>
 
@@ -30,7 +30,7 @@
 			<button type="submit">Invia</button>
 		</form>
   </div>
-	  
+<section id="section1">
       <h3 class="subtitle">CPannel</h3>
       <ul id="checklist">
         <div class="check">
@@ -41,6 +41,8 @@
           <li><input type="checkbox" id="item4" value="item4"><label for="item4">In "Database MySQL" creare un database con il nome del cliente</label></li>
           <li><input type="checkbox" id="item5" value="item5"><label for="item5">Aggiungere utente al database</label></li>
        </div>
+</section>
+<section id="section2">
   <div class="row">
     <div class="col-6">
       <h3 class="subtitle">Collegamento FTP</h3>
@@ -61,6 +63,8 @@
         </div>
     </div>
   </div>
+</section>
+<section id="section2">
     <h3 class="subtitle">Plugin WordPress</h3>
         <div class="check">
           <li></li>
@@ -77,20 +81,36 @@
       <li><input type="checkbox" id="item4" value="item4"><label for="item4">Call con cliente (opzionale)</label></li>
    </div>
       </ul>
+</section>
     <script>
-	    const form = document.querySelector('#macchine-form');
-const checkboxes = form.querySelectorAll('input[type=checkbox]');
-const selectedMacchine = [];
+	    const menuItems = document.querySelectorAll('.menu-item');
 
-form.addEventListener('submit', function(event) {
-	event.preventDefault();
-	for (let i = 0; i < checkboxes.length; i++) {
-		if (checkboxes[i].checked) {
-			selectedMacchine.push(checkboxes[i].value);
+		menuItems.forEach(item => {
+		  item.addEventListener('click', scrollToSection);
+		});
+		function scrollToSection(event) {
+		  event.preventDefault();
+
+		  const sectionId = event.currentTarget.getAttribute('href');
+		  const section = document.querySelector(sectionId);
+
+		  section.scrollIntoView({ behavior: 'smooth' });
 		}
-	}
-	console.log(`Macchine preferite selezionate: ${selectedMacchine.join(', ')}`);
-});
+	    
+	    const form = document.querySelector('#macchine-form');
+	    const checkboxes = form.querySelectorAll('input[type=checkbox]');
+	    const selectedMacchine = [];
+
+		form.addEventListener('submit', function(event) {
+			event.preventDefault();
+			for (let i = 0; i < checkboxes.length; i++) {
+				if (checkboxes[i].checked) {
+					selectedMacchine.push(checkboxes[i].value);
+				}
+			}
+			console.log(`Macchine preferite selezionate: ${selectedMacchine.join(', ')}`);
+		});
+	    
           const checklist = document.getElementById('checklist');
           const items = checklist.querySelectorAll('li input');
 
