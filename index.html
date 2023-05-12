@@ -58,8 +58,37 @@
       <li><input type="checkbox" id="item4" value="item4"><label for="item4">Call con cliente (opzionale)</label></li>
    </div>
       </ul>
+	  	<h1>Form Macchine Preferite</h1>
+	<form id="macchine-form">
+		<label for="ferrari">Ferrari:</label>
+		<input type="checkbox" id="ferrari" name="ferrari" value="ferrari">
+		<br>
+		<label for="lamborghini">Lamborghini:</label>
+		<input type="checkbox" id="lamborghini" name="lamborghini" value="lamborghini">
+		<br>
+		<label for="porsche">Porsche:</label>
+		<input type="checkbox" id="porsche" name="porsche" value="porsche">
+		<br>
+		<label for="bugatti">Bugatti:</label>
+		<input type="checkbox" id="bugatti" name="bugatti" value="bugatti">
+		<br>
+		<button type="submit">Invia</button>
+	</form>
 
     <script>
+	    const form = document.querySelector('#macchine-form');
+const checkboxes = form.querySelectorAll('input[type=checkbox]');
+const selectedMacchine = [];
+
+form.addEventListener('submit', function(event) {
+	event.preventDefault();
+	for (let i = 0; i < checkboxes.length; i++) {
+		if (checkboxes[i].checked) {
+			selectedMacchine.push(checkboxes[i].value);
+		}
+	}
+	console.log(`Macchine preferite selezionate: ${selectedMacchine.join(', ')}`);
+});
           const checklist = document.getElementById('checklist');
           const items = checklist.querySelectorAll('li input');
 
