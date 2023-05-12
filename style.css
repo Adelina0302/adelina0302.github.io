@@ -112,6 +112,8 @@ nav ul li a:hover {
   background-color: #ddd;
 }
 label{
- line-height: 40px;
+ line-height: 30px;
 }
-
+button{
+ margin-top: 20px;
+}
