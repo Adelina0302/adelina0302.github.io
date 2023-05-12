@@ -3,20 +3,7 @@
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
   <body>
-      <script>
-          const checklist = document.getElementById('checklist');
-          const items = checklist.querySelectorAll('li input');
-
-        items.forEach(item => {
-          item.addEventListener('change', function() {
-            if (this.checked) {
-              this.parentNode.classList.add('checked');
-            } else {
-              this.parentNode.classList.remove('checked');
-            }
-          });
-        });
-      </script>
+      
 
     <h2 class="title">Nuovo sito</h2>
       <h3 class="subtitle">CPannel</h3>
@@ -66,7 +53,20 @@
    </div>
       </ul>
 
-    
+    <script>
+          const checklist = document.getElementById('checklist');
+          const items = checklist.querySelectorAll('li input');
+
+        items.forEach(item => {
+          item.addEventListener('change', function() {
+            if (this.checked) {
+              this.parentNode.classList.add('checked');
+            } else {
+              this.parentNode.classList.remove('checked');
+            }
+          });
+        });
+      </script>
 
   </body>
 </html>
