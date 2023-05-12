@@ -27,7 +27,8 @@ p{
 }
 .title{
   font-size: 50px;
-  color: #ABADFC;
+  background: #ABADFC;
+  color: #fff;
   margin: 0px;
   padding-bottom: 40px;
 }
