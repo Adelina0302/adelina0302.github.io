@@ -26,6 +26,7 @@ li::marker{
 }
 li{
  margin-bottom: 20px;
+ margin-left: 50px;
 }
 .check{
   border: 1px solid #000;
