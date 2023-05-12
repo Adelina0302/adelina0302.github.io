@@ -1,21 +1,28 @@
-<h2>La mia checklist</h2>
-<ul id="checklist">
-  <li><input type="checkbox" id="item1" value="item1"><label for="item1">Attività 1</label></li>
-  <li><input type="checkbox" id="item2" value="item2"><label for="item2">Attività 2</label></li>
-  <li><input type="checkbox" id="item3" value="item3"><label for="item3">Attività 3</label></li>
-</ul>
-<script>
-    const checklist = document.getElementById('checklist');
-    const items = checklist.querySelectorAll('li input');
+<html>
+<head>
+<link href="stile.css" rel="stylesheet" type="text/css">
+</head>
+  <body>
 
-  items.forEach(item => {
-    item.addEventListener('change', function() {
-      if (this.checked) {
-        this.parentNode.classList.add('checked');
-      } else {
-        this.parentNode.classList.remove('checked');
-      }
-    });
-  });
-</script>
+    <h2>La mia checklist</h2>
+    <ul id="checklist">
+      <li><input type="checkbox" id="item1" value="item1"><label for="item1">Attività 1</label></li>
+      <li><input type="checkbox" id="item2" value="item2"><label for="item2">Attività 2</label></li>
+      <li><input type="checkbox" id="item3" value="item3"><label for="item3">Attività 3</label></li>
+    </ul>
+    <script>
+        const checklist = document.getElementById('checklist');
+        const items = checklist.querySelectorAll('li input');
 
+      items.forEach(item => {
+        item.addEventListener('change', function() {
+          if (this.checked) {
+            this.parentNode.classList.add('checked');
+          } else {
+            this.parentNode.classList.remove('checked');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
