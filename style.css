@@ -50,6 +50,7 @@ p{
 .pubblicita{
   font-size: 20px;
   color:#000;
+  padding-left:0px;
 }
 .form-pubblicita{
   border: 1px solid #000;
