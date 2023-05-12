@@ -58,7 +58,8 @@
       <li><input type="checkbox" id="item4" value="item4"><label for="item4">Call con cliente (opzionale)</label></li>
    </div>
       </ul>
-	  	<h1>Form Macchine Preferite</h1>
+	  	<h1 class="subtitle">Form Macchine Preferite</h1>
+	  <div class="check">
 	<form id="macchine-form">
 		<label for="ferrari">Ferrari:</label>
 		<input type="checkbox" id="ferrari" name="ferrari" value="ferrari">
@@ -74,7 +75,7 @@
 		<br>
 		<button type="submit">Invia</button>
 	</form>
-
+	  </div>
     <script>
 	    const form = document.querySelector('#macchine-form');
 const checkboxes = form.querySelectorAll('input[type=checkbox]');
