@@ -32,6 +32,8 @@ p{
   margin: 0px;
   padding-bottom: 20px;
   padding-top: 20px;
+  text-align: center;
+  padding-left: 0px;
 }
 .subtitle{
   font-size: 30px;
