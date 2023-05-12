@@ -24,4 +24,5 @@
 li::marker{
  display:none;
 }
-
+li{
+ margin-bottom: 20px;
