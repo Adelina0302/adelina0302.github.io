@@ -41,7 +41,11 @@ p{
   margin-bottom: 0px;
 }
 .subtitle-no-margin{
-  margin-left: 0px;
+  padding-left: 0px;
+  font-family: revert;
+  font-size: 30px;
+  color: #ABADFC;
+  margin-bottom: 0px;
 }
 li{
  margin-bottom: 20px;
