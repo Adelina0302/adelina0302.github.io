@@ -32,5 +32,8 @@ li{
   border: 1px solid #000;
 }
 .checkbox-color{
- color:#ABADFC;
+  color:#ABADFC;
+}
+.spazio{
+  margin-top: 20px;
 }
