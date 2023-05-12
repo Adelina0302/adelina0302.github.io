@@ -1,4 +1,4 @@
-<style>
+
  #checklist {
   list-style-type: none;
   margin: 0;
@@ -16,5 +16,4 @@
 #checklist li input[type="checkbox"] {
   margin-right: 10px;
 }
-</style>
 
