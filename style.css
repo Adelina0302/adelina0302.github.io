@@ -47,9 +47,14 @@ p{
   color: #ABADFC;
   margin-bottom: 0px;
 }
-.pubblicità{
+.pubblicita{
   font-size: 20px;
   color:#000;
+}
+.form-pubblicita{
+  border: 1px solid #000;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 li{
  margin-bottom: 20px;
